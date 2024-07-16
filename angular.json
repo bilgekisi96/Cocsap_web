@@ -7,7 +7,18 @@
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
+<<<<<<< HEAD
           "style": "scss"
+=======
+          "style": "scss",
+          "standalone": false
+        },
+        "@schematics/angular:directive": {
+          "standalone": false
+        },
+        "@schematics/angular:pipe": {
+          "standalone": false
+>>>>>>> 3ba36a2 (initial commit)
         }
       },
       "root": "",
@@ -34,7 +45,16 @@
             "styles": [
               "src/styles.scss"
             ],
+<<<<<<< HEAD
             "scripts": []
+=======
+            "scripts": [],
+            "server": "src/main.server.ts",
+            "prerender": true,
+            "ssr": {
+              "entry": "server.ts"
+            }
+>>>>>>> 3ba36a2 (initial commit)
           },
           "configurations": {
             "production": {
@@ -98,8 +118,11 @@
         }
       }
     }
+<<<<<<< HEAD
   },
   "cli": {
     "analytics": "2e84c7d7-d4c5-4bb3-bb54-68b2ea7354c5"
+=======
+>>>>>>> 3ba36a2 (initial commit)
   }
 }

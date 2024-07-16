@@ -1,10 +1,23 @@
 import { TestBed } from '@angular/core/testing';
+<<<<<<< HEAD
+=======
+import { RouterModule } from '@angular/router';
+>>>>>>> 3ba36a2 (initial commit)
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+<<<<<<< HEAD
       imports: [AppComponent],
+=======
+      imports: [
+        RouterModule.forRoot([])
+      ],
+      declarations: [
+        AppComponent
+      ],
+>>>>>>> 3ba36a2 (initial commit)
     }).compileComponents();
   });
 
@@ -14,7 +27,11 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
+<<<<<<< HEAD
   it(`should have the 'cocsap' title`, () => {
+=======
+  it(`should have as title 'cocsap'`, () => {
+>>>>>>> 3ba36a2 (initial commit)
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     expect(app.title).toEqual('cocsap');
