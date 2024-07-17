@@ -1,0 +1,156 @@
+
+<div class="sidenav" [ngClass]="collapsed ? 'sidenav-collapsed':'collapsed'">
+
+  <div class="logo-container">
+      <button class="logo" (click)="toggleCollapse()">T</button>
+      <div class="logo-text" @fadeInOut *ngIf="collapsed">COCSAPIENTIS</div>
+      <button class="btn-close" @rotate *ngIf="collapsed" (click)="closeSidenav()">
+        <i class="fal fa-times close-icon"></i>
+      </button>
+  </div>
+
+  <ul class="sidenav-nav">
+      <li class="sidenav-nav-item" *ngFor="let data of navData">
+        <a class="sidenav-nav-link" [routerLink]= "disabled ? null :[data.routeLink]"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{exact: true}"
+        >
+            <i class="sidenav-link-icon" [class]="data.icon"></i>
+            <span class="sidenav-link-text" @fadeInOut *ngIf="collapsed">
+              {{data.label}}
+            </span>
+        </a>
+      </li>
+
+  </ul>
+
+</div>
+
+<style>
+
+
+.sidenav {
+
+  background: #263238;
+  transition: all .5s ease;
+  margin-left: -0.5rem;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  width: 5rem;
+  height: 100%;
+
+}
+
+
+.logo-container {
+
+  display: flex;
+  align-items: center;
+  padding: 0.938rem 0.938rem 0 0.938rem;
+  width: 100%;
+
+}
+
+.logo {
+
+    background: #fff;
+    text-align: center;
+    width: 3rem;
+    min-width: 3rem;
+    border-radius: 0.313rem;
+    padding: 0.313rem;
+    font-size: 24px;
+    font-weight: 900;
+    cursor: pointer;
+    border: none;
+
+}
+
+.logo-text {
+
+  margin-left: 1.5rem;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+
+}
+
+.btn-close {
+
+  margin-left: 1rem;
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: transparent;
+  border: none;
+
+}
+
+.fa-times {
+  color: #fff;
+  font-size: 24px;
+}
+
+
+.sidenav-collapsed {
+  width: 16.5625rem;
+}
+
+.sidenav-nav {
+
+  list-style: none;
+  padding: 0.938rem;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: calc(100% - 3.65rem);
+  cursor: pointer;
+
+}
+
+
+.sidenav-nav-item {
+  width: 100%;
+
+}
+
+
+.sidenav-nav-link {
+
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  height: 3rem;
+  color: #f3f3f3;
+  transition: all .3s ease;
+  border-radius:0.625rem;
+
+}
+
+.sidenav-nav-link:hover {
+  background-color: #808080;
+}
+
+.sidenav-link-icon {
+
+  font-size: 22px;
+  width: 2rem;
+  min-width: 2rem;
+  margin: 0 0.5rem;
+  text-align: center;
+
+}
+
+.sidenav-link-text {
+  margin-left: 1.5rem;
+}
+
+.active {
+  background-color: brown
+}
+
+
+</style>
