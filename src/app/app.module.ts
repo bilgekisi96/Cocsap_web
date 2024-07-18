@@ -9,6 +9,16 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import {MatButtonModule} from "@angular/material/button";
 import { BodyComponent } from './components/body/body.component';
+import {MatIcon, MatIconModule} from "@angular/material/icon";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {MatToolbarModule} from "@angular/material/toolbar";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {MatListModule} from "@angular/material/list";
+import {MatMenuModule} from "@angular/material/menu";
+import {MatCardModule} from "@angular/material/card";
+import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatInputModule} from "@angular/material/input";
 
 @NgModule({
   declarations: [
@@ -22,7 +32,20 @@ import { BodyComponent } from './components/body/body.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatButtonModule
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatIcon,
+    MatInputModule,
+    FormsModule,
+    MatIconModule,
+    MatFormFieldModule,
+    MatButtonModule,
+    MatProgressSpinnerModule,
+    MatCardModule,
+    MatMenuModule,
+    MatListModule,
+    ReactiveFormsModule,
+    MatToolbarModule,
   ],
   providers: [
     provideAnimationsAsync()
