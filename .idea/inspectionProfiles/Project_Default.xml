@@ -1,13 +1,13 @@
 <component name="InspectionProjectProfileManager">
   <profile version="1.0">
     <option name="myName" value="Project Default" />
+    <inspection_tool class="Eslint" enabled="true" level="WARNING" enabled_by_default="true" />
     <inspection_tool class="HtmlUnknownAttribute" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="myValues">
         <value>
-          <list size="3">
-            <item index="0" class="java.lang.String" itemvalue="mat-menu-item" />
-            <item index="1" class="java.lang.String" itemvalue="[matMenuTriggerFor]" />
-            <item index="2" class="java.lang.String" itemvalue="[routerLink]" />
+          <list size="2">
+            <item index="0" class="java.lang.String" itemvalue="cButton" />
+            <item index="1" class="java.lang.String" itemvalue="breakpoint" />
           </list>
         </value>
       </option>
@@ -16,18 +16,21 @@
     <inspection_tool class="HtmlUnknownTag" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="myValues">
         <value>
-          <list size="11">
+          <list size="14">
             <item index="0" class="java.lang.String" itemvalue="nobr" />
             <item index="1" class="java.lang.String" itemvalue="noembed" />
             <item index="2" class="java.lang.String" itemvalue="comment" />
             <item index="3" class="java.lang.String" itemvalue="noscript" />
             <item index="4" class="java.lang.String" itemvalue="embed" />
             <item index="5" class="java.lang.String" itemvalue="script" />
-            <item index="6" class="java.lang.String" itemvalue="mat-list-item" />
-            <item index="7" class="java.lang.String" itemvalue="mat-menu" />
-            <item index="8" class="java.lang.String" itemvalue="mat-toolbar" />
-            <item index="9" class="java.lang.String" itemvalue="mat-nav-list" />
-            <item index="10" class="java.lang.String" itemvalue="mat-slide-toggle" />
+            <item index="6" class="java.lang.String" itemvalue="app-angular-lamp" />
+            <item index="7" class="java.lang.String" itemvalue="c-card-body" />
+            <item index="8" class="java.lang.String" itemvalue="c-card" />
+            <item index="9" class="java.lang.String" itemvalue="c-container" />
+            <item index="10" class="java.lang.String" itemvalue="c-row" />
+            <item index="11" class="java.lang.String" itemvalue="c-col" />
+            <item index="12" class="java.lang.String" itemvalue="c-input-group" />
+            <item index="13" class="java.lang.String" itemvalue="c-card-group" />
           </list>
         </value>
       </option>

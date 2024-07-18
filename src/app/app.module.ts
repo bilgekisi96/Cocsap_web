@@ -7,6 +7,8 @@ import { HomeComponent } from './components/home/home.component';
 import { RegisterComponent } from './components/register/register.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
+import {MatButtonModule} from "@angular/material/button";
+import { BodyComponent } from './components/body/body.component';
 
 @NgModule({
   declarations: [
@@ -14,11 +16,13 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
     LoginComponent,
     HomeComponent,
     RegisterComponent,
-    SidenavComponent
+    SidenavComponent,
+    BodyComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatButtonModule
   ],
   providers: [
     provideAnimationsAsync()
