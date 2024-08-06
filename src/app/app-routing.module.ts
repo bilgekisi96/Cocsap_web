@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
+<<<<<<< HEAD
 
 import {RealtimeComponent} from "./batrack/components/realtime.component";
 import {MonitoringComponent} from "./batrack/components/monitoring.component";
@@ -31,3 +32,12 @@ export class AppRoutingModule {
 
 
 }
+=======
+const routes: Routes = [];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }
+>>>>>>> 1a638437eca69f8c69b80856a63b3aaf442f6ced

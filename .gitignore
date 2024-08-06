@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
 */.mp4
+=======
+# See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
+>>>>>>> 1a638437eca69f8c69b80856a63b3aaf442f6ced
 
 # Compiled output
 /dist
