@@ -23,7 +23,7 @@ interface TogglePage {
 export class AppComponent implements OnInit{
   constructor(private router: Router) {
   }
-  title = 'TEK ELEKTRİK';
+  title = 'COCSAPIENTIS';
   isSideNavCollapsed = false;
   screenWidth = 0;
 
