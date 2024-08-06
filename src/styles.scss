@@ -1,9 +1,5 @@
-<<<<<<< HEAD
 /* You can add global styles to this file, and also import other style files */
 
-=======
-<<<<<<< HEAD
->>>>>>> 1a638437eca69f8c69b80856a63b3aaf442f6ced
 
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
@@ -15,7 +11,6 @@
 // Be sure that you only ever include this mixin once!
 @include mat.core();
 
-<<<<<<< HEAD
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
@@ -32,24 +27,12 @@ $site_web-theme: mat.define-light-theme((
     primary: $site_web-primary,
     accent: $site_web-accent,
     warn: $site_web-warn,
-=======
-// Define the theme object.
-$cocsap-theme: mat.define-theme((
-  color: (
-    theme-type: light,
-    primary: mat.$azure-palette,
-    tertiary: mat.$blue-palette,
-  ),
-  density: (
-    scale: 0,
->>>>>>> 1a638437eca69f8c69b80856a63b3aaf442f6ced
   )
 ));
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
-<<<<<<< HEAD
 @include mat.all-component-themes($site_web-theme);
 
 /* You can add global styles to this file, and also import other style files */
@@ -102,22 +85,3 @@ html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 
-=======
-:root {
-  @include mat.all-component-themes($cocsap-theme);
-}
-
-// Comment out the line below if you want to use the pre-defined typography utility classes.
-// For more information: https://material.angular.io/guide/typography#using-typography-styles-in-your-application.
-// @include mat.typography-hierarchy($cocsap-theme);
-
-// Comment out the line below if you want to use the deprecated `color` inputs.
-// @include mat.color-variants-backwards-compatibility($cocsap-theme);
-/* You can add global styles to this file, and also import other style files */
-
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-=======
-/* You can add global styles to this file, and also import other style files */
->>>>>>> 3ba36a2 (initial commit)
->>>>>>> 1a638437eca69f8c69b80856a63b3aaf442f6ced

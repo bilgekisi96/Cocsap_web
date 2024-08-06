@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -73,25 +72,5 @@ import { PictureSwitcherComponent } from './batrack/components/picture-switcher/
   schemas:[
     CUSTOM_ELEMENTS_SCHEMA
   ]
-=======
-import { NgModule } from '@angular/core';
-import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-
-@NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [
-    provideClientHydration()
-  ],
-  bootstrap: [AppComponent]
->>>>>>> 1a638437eca69f8c69b80856a63b3aaf442f6ced
 })
 export class AppModule { }
