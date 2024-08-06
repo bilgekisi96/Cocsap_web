@@ -3,30 +3,11 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-<<<<<<< HEAD
     "battery_monitoring": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss"
-=======
-    "cocsap": {
-      "projectType": "application",
-      "schematics": {
-        "@schematics/angular:component": {
-<<<<<<< HEAD
-          "style": "scss"
-=======
-          "style": "scss",
-          "standalone": false
-        },
-        "@schematics/angular:directive": {
-          "standalone": false
-        },
-        "@schematics/angular:pipe": {
-          "standalone": false
->>>>>>> 3ba36a2 (initial commit)
->>>>>>> 1a638437eca69f8c69b80856a63b3aaf442f6ced
         }
       },
       "root": "",
@@ -34,26 +15,17 @@
       "prefix": "app",
       "architect": {
         "build": {
-<<<<<<< HEAD
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/battery_monitoring",
             "index": "src/index.html",
             "main": "src/main.ts",
-=======
-          "builder": "@angular-devkit/build-angular:application",
-          "options": {
-            "outputPath": "dist/cocsap",
-            "index": "src/index.html",
-            "browser": "src/main.ts",
->>>>>>> 1a638437eca69f8c69b80856a63b3aaf442f6ced
             "polyfills": [
               "zone.js"
             ],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
-<<<<<<< HEAD
               "src/favicon.ico",
               "src/assets"
             ],
@@ -65,33 +37,12 @@
               "src/styles.scss"
             ],
             "scripts": []
-=======
-              {
-                "glob": "**/*",
-                "input": "public"
-              }
-            ],
-            "styles": [
-              "src/styles.scss"
-            ],
-<<<<<<< HEAD
-            "scripts": []
-=======
-            "scripts": [],
-            "server": "src/main.server.ts",
-            "prerender": true,
-            "ssr": {
-              "entry": "server.ts"
-            }
->>>>>>> 3ba36a2 (initial commit)
->>>>>>> 1a638437eca69f8c69b80856a63b3aaf442f6ced
           },
           "configurations": {
             "production": {
               "budgets": [
                 {
                   "type": "initial",
-<<<<<<< HEAD
                   "maximumWarning": "500kb",
                   "maximumError": "1mb"
                 },
@@ -99,32 +50,17 @@
                   "type": "anyComponentStyle",
                   "maximumWarning": "2kb",
                   "maximumError": "4kb"
-=======
-                  "maximumWarning": "500kB",
-                  "maximumError": "1MB"
-                },
-                {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "2kB",
-                  "maximumError": "4kB"
->>>>>>> 1a638437eca69f8c69b80856a63b3aaf442f6ced
                 }
               ],
               "outputHashing": "all"
             },
             "development": {
-<<<<<<< HEAD
               "buildOptimizer": false,
               "optimization": false,
               "vendorChunk": true,
               "extractLicenses": false,
               "sourceMap": true,
               "namedChunks": true
-=======
-              "optimization": false,
-              "extractLicenses": false,
-              "sourceMap": true
->>>>>>> 1a638437eca69f8c69b80856a63b3aaf442f6ced
             }
           },
           "defaultConfiguration": "production"
@@ -133,35 +69,23 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-<<<<<<< HEAD
               "browserTarget": "battery_monitoring:build:production"
             },
             "development": {
               "browserTarget": "battery_monitoring:build:development"
-=======
-              "buildTarget": "cocsap:build:production"
-            },
-            "development": {
-              "buildTarget": "cocsap:build:development"
->>>>>>> 1a638437eca69f8c69b80856a63b3aaf442f6ced
             }
           },
           "defaultConfiguration": "development"
         },
         "extract-i18n": {
-<<<<<<< HEAD
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
             "browserTarget": "battery_monitoring:build"
           }
-=======
-          "builder": "@angular-devkit/build-angular:extract-i18n"
->>>>>>> 1a638437eca69f8c69b80856a63b3aaf442f6ced
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-<<<<<<< HEAD
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "inlineStyleLanguage": "scss",
@@ -171,21 +95,6 @@
             ],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
-=======
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ],
-            "tsConfig": "tsconfig.spec.json",
-            "inlineStyleLanguage": "scss",
-            "assets": [
-              {
-                "glob": "**/*",
-                "input": "public"
-              }
-            ],
-            "styles": [
->>>>>>> 1a638437eca69f8c69b80856a63b3aaf442f6ced
               "src/styles.scss"
             ],
             "scripts": []
@@ -193,17 +102,8 @@
         }
       }
     }
-<<<<<<< HEAD
   },
   "cli": {
     "analytics": "b30e8ebf-34b3-4e3a-bb15-ceb54cff2eb3"
-=======
-<<<<<<< HEAD
-  },
-  "cli": {
-    "analytics": "2e84c7d7-d4c5-4bb3-bb54-68b2ea7354c5"
-=======
->>>>>>> 3ba36a2 (initial commit)
->>>>>>> 1a638437eca69f8c69b80856a63b3aaf442f6ced
   }
 }
