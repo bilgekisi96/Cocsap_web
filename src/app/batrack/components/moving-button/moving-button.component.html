@@ -1,0 +1,29 @@
+<div class="button-container" (click)="animateButton()">
+  <button [@moveButton]="state" class="moving-button">
+    Move Me!
+  </button>
+</div>
+
+<style>
+  .button-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.moving-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+  outline: none;
+}
+
+
+</style>

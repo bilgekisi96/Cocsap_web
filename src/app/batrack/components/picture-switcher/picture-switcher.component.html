@@ -1,0 +1,61 @@
+<div class="view-toggle">
+  <button mat-button class="login-button" style="color:#6FFD00" *ngFor="let folder of folders" (click)="changeFolder(folder.path)">{{ folder.name }}</button>
+  <button mat-button class="login-button" style="color:#6FFD00" (click)="setView('grid')">Grid View</button>
+  <button mat-button class="login-button" style="color:#6FFD00" (click)="setView('list')">List View</button>
+</div>
+
+<div [ngClass]="currentViewClass">
+  <div *ngFor="let picture of pictures" class="picture-container">
+    <img [src]="picture" alt="Picture" />
+  </div>
+</div>
+
+
+<style>
+  body {
+  background-color: #D2B48C; /* Clay color */
+}
+
+  .view-toggle {
+  margin-top:20rem;
+  margin-bottom: 20px;
+}
+
+button {
+  margin: 0 5px;
+}
+
+.grid-view {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.grid-view .picture-container {
+  flex: 1 1 30%; /* Adjust the size of the grid items */
+  margin: 10px;
+}
+
+.list-view {
+  display: block;
+}
+
+.list-view .picture-container {
+  margin-bottom: 20px;
+}
+
+.picture-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+  .login-button {
+    width: 6rem;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+    border-radius: 1rem;
+    height: 3rem;
+    color: white;
+    border: 2px solid #E40909;
+  }
+
+</style>

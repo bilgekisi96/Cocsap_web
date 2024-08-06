@@ -1,0 +1,48 @@
+<div class="mapentry">
+
+  <select [(ngModel)]="selectedoption2" >
+    <option *ngFor="let option of color_list" [value]="option">{{option}}</option>
+  </select>
+
+ <button mat-button style="margin-left: 2rem" (click)="updateWaypoints()">update</button>
+
+</div>
+
+<div class="map-container">
+
+ <div class="map-frame">
+ <div id="map"></div>
+ </div>
+
+</div>
+
+<style>
+
+.mapentry{
+ margin-left: 10rem;
+ margin-top:  8rem;
+}
+
+.map-container {
+
+ top: 7rem;
+ margin-left: 5rem;
+ right: 0;
+ bottom: 0;
+ width: 60rem;
+ height: 30rem;
+  background-clip: padding-box;
+}
+
+.map-frame {
+ border: 2px solid black;
+ height: 100%;
+    background-clip: padding-box;
+}
+
+#map {
+ height: 100%;
+    background-clip: padding-box;
+}
+
+</style>

@@ -1,0 +1,31 @@
+<div class="button-container">
+  <button mat-flat-button [@bounce]="animationState" class="loop-button" (click)="scrollDown()">
+    Keşfet
+  </button>
+</div>
+
+
+<style>
+
+  .button-container {
+    position: relative;
+    display: flex;
+    align-items: right;
+    justify-content: right;
+    margin-right:6rem;
+    margin-top:-3rem;
+  }
+
+.loop-button {
+  background-color: orange;
+  width:8rem;
+  height:3rem;
+  border-radius:1rem;
+  font-size: 1rem;
+  cursor: pointer;
+
+}
+
+
+
+</style>

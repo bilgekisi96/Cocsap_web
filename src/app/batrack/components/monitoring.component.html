@@ -1,0 +1,113 @@
+<video autoplay muted loop playsinline class="background-video">
+  <source src="assets/cocsapvideol.mp4" type="video/mp4"/>
+</video>
+
+<div class="horizontal-line"></div>
+
+<div class="text">
+  <span class="text-title">Web Development</span>
+  <span class="text-subtitle">Yapay Zeka</span>
+  <app-loop-button></app-loop-button>
+</div>
+
+<div class="container">
+  <div class="image-container">
+    <img src="assets/solarbil.jpg" alt="techno">
+
+    <button class="infbut infbut1" (click)="infbu1()">Misyon Ve Vizyon</button>
+    <button class="infbut infbut2" (click)="infbu2()">Şirket Hakkında</button>
+    <button class="infbut infbut4" (click)="infbu4()">İşimiz</button>
+    <button class="infbut infbut6" (click)="infbu6()">Sistem Ve Araçlar</button>
+  </div>
+</div>
+
+<style>
+
+  .background-video {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1; /* Background video at the lowest layer */
+    opacity: 0.9;
+    object-fit: cover;
+  }
+
+  .horizontal-line {
+    width: 90%;
+    height: 2px;
+    margin-top: 31rem;
+    margin-left: 4rem;
+    background-color: white;
+    position: absolute;
+    z-index: 2; /* Above the video, below the text */
+  }
+
+  .text {
+    margin-left: 4rem;
+    margin-top: 38rem;
+    position: relative;
+    z-index: 3; /* Above the line */
+  }
+
+  .text-title, .text-subtitle {
+    font-size: 5.5rem;
+    display: block;
+    font-weight: 490;
+    font-family: 'Trebuchet MS', sans-serif;
+    color: #E8FF00;
+  }
+
+  .text-subtitle {
+    margin-top: 4.5rem;
+  }
+
+  .container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 4; /* On top of all previous elements */
+  }
+
+  .image-container {
+    margin-top: 36rem;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-left: -1.1rem;
+  }
+
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+    transition: opacity 0.8s ease;
+  }
+
+  .infbut {
+    position: absolute;
+    margin-top: 10rem;
+    width: 30rem;
+    height: 3.5rem;
+    font-size: 2rem;
+    font-family: 'Sans Serif', Arial, sans-serif;
+    border-radius: 2.5rem;
+    color: black;
+    border: 1px solid #E40909;
+    background: transparent;
+    cursor: pointer;
+    z-index: 5; /* Ensure buttons are on top of the image */
+  }
+
+  .infbut1 { top: 60%; left: 13%; }
+  .infbut2 { top: 60%; right: 13%; }
+  .infbut4 { top: 50%; left: 13%; }
+  .infbut6 { top: 50%; right: 13%; }
+
+</style>
