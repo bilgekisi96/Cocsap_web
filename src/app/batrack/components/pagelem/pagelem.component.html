@@ -14,46 +14,38 @@
 
 </div>
 
-
 <style>
-
-
   .page-elem {
     position: fixed;
     display: flex;
     z-index: 1;
+    width: 100%; /* Ensure it spans the full width */
   }
 
   .logo {
-    margin-top:-5rem;
-    margin-left:2.5rem;
-    width:35rem;
+    margin-top: -5rem;
+    margin-left: 2.5rem;
+    width: 35rem;
   }
 
   .button-container {
-    margin-top:-5rem;
+    margin-top: -5rem;
     overflow: hidden;
     position: relative;
     display: flex;
-    width:%100;
-    justify-content: flex-end;
+    width: 100%;
+    justify-content: flex-end; /* Align items to the start (left) */
     align-items: center;
+    margin-right: 6rem;
   }
 
+  .insta,
   .whatsapp,
   .twetter,
   .facebook {
     width: 38px;
     height: 38px;
     margin-right: 2rem;
-
-  }
-
-  .insta {
-    width: 38px;
-    height: 38px;
-    margin-right: 2rem;
-    margin-left: 25rem;
   }
 
   .login-button {
@@ -65,5 +57,4 @@
     color: white;
     border: 2px solid #E40909;
   }
-
 </style>
