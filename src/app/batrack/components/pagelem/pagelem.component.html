@@ -5,10 +5,23 @@
     </div>
 
     <div class="button-container">
-      <img src="assets/insta.png" alt="insta" class="insta" />
-      <img src="assets/whatsapp.png" alt="whatsapp" class="whatsapp" />
-      <img src="assets/twetter.png" alt="Logo" class="twetter" />
-      <img src="assets/facebook.png" alt="facebook" class="facebook" />
+
+      <button class="image-button" (click)="onButtonClickinsta()">
+        <img src="assets/insta.png" alt="insta" class="insta" />
+      </button>
+
+      <button class="image-button" (click)="onButtonClickwhatsapp()">
+        <img src="assets/whatsapp.png" alt="whatsapp" class="whatsapp" />
+      </button>
+
+      <button class="image-button" (click)="onButtonClicktwetter()">
+        <img src="assets/twetter.png" alt="Logo" class="twetter" />
+      </button>
+
+      <button class="image-button" (click)="onButtonClickfacebook()">
+        <img src="assets/facebook.png" alt="facebook" class="facebook" />
+      </button>
+
       <button mat-button class="login-button" style="color:#6FFD00" (click)="logfunc()">Login</button>
     </div>
 
@@ -57,4 +70,23 @@
     color: white;
     border: 2px solid #E40909;
   }
+
+  .image-container {
+    position: relative;
+    display: inline-block;
+  }
+
+  .image {
+    width: 100%;
+    height: auto;
+  }
+
+  .image-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
+
+
 </style>
