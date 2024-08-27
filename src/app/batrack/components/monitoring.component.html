@@ -29,7 +29,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1; /* Background video at the lowest layer */
+    z-index: 1;
     opacity: 0.9;
     object-fit: cover;
   }
@@ -41,14 +41,14 @@
     margin-left: 4rem;
     background-color: white;
     position: absolute;
-    z-index: 2; /* Above the video, below the text */
+    z-index: 2;
   }
 
   .text {
     margin-left: 4rem;
     margin-top: 38rem;
     position: relative;
-    z-index: 3; /* Above the line */
+    z-index: 3;
   }
 
   .text-title, .text-subtitle {
@@ -70,7 +70,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 4; /* On top of all previous elements */
+    z-index: 4;
   }
 
   .image-container {
@@ -92,7 +92,6 @@
 
   .infbut {
     position: absolute;
-    margin-top: 10rem;
     width: 30rem;
     height: 3.5rem;
     font-size: 2rem;
@@ -102,12 +101,84 @@
     border: 1px solid #E40909;
     background: transparent;
     cursor: pointer;
-    z-index: 5; /* Ensure buttons are on top of the image */
+    z-index: 5;
   }
 
-  .infbut1 { top: 60%; left: 13%; }
-  .infbut2 { top: 60%; right: 13%; }
-  .infbut4 { top: 50%; left: 13%; }
-  .infbut6 { top: 50%; right: 13%; }
+  .infbut1 { top: 80%; left: 13%; }
+  .infbut2 { top: 80%; right: 13%; }
+  .infbut4 { top: 70%; left: 13%; }
+  .infbut6 { top: 70%; right: 13%; }
+
+  @media (max-width: 768px) {
+    .horizontal-line {
+      margin-top: 22rem;
+      margin-left: 2rem;
+    }
+
+    .text {
+      margin-left: 2rem;
+      margin-top: 26rem;
+    }
+
+    .text-title, .text-subtitle {
+      font-size: 3rem;
+    }
+
+    .text-subtitle {
+      margin-top: 2.5rem;
+    }
+
+    .container {
+      flex-direction: column;
+      margin-top: 20rem;
+    }
+
+    .infbut {
+      width: 20rem;
+      height: 3rem;
+      font-size: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .infbut1, .infbut2, .infbut4, .infbut6 {
+      left: 50%;
+      transform: translateX(-50%);
+      top: unset;
+      margin-top: 1rem;
+    }
+
+    .image-container {
+      margin-top: 5rem;
+      margin-left: 0;
+    }
+
+    .image-container img {
+      opacity: 1;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .horizontal-line {
+      margin-top: 15rem;
+    }
+
+    .text {
+      margin-top: 18rem;
+    }
+
+    .text-title, .text-subtitle {
+      font-size: 2.5rem;
+    }
+
+    .text-subtitle {
+      margin-top: 1.5rem;
+    }
+
+    .infbut {
+      width: 16rem;
+      height: 2.5rem;
+      font-size: 1.2rem;
+    }
+  }
 
 </style>

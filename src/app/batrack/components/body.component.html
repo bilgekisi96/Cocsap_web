@@ -1,40 +1,64 @@
-
 <div class="body" [ngClass]="getBodyClass()">
   <router-outlet (activate)="onActivate($event)" (deactivate)="onDeactivate($event)"></router-outlet>
 </div>
 
-
 <style>
+  .body {
+    width: calc(100% - 5rem);
+    height: 100vh;
+    margin-left: 5rem;
+    z-index: 0;
+    position: relative;
+    top: 0;
+    transition: all 0.5s ease;
+    background: #f4f7fa;
+    padding: 0.2rem;
+  }
 
-.body {
+  .body-trimmed {
+    width: calc(100% - 16.5625rem);
+    margin-left: 16.5625rem;
+  }
 
-  width: calc(100% - 5rem);
-  height: 100vh;
-  margin-left: 5rem;
-  z-index: 0;
-  position: relative;
-  top: 0;
-  transition: all.5s ease;
+  .body-md-screen {
+    width: calc(100% - 5rem);
+    margin-left: 5rem;
+  }
 
-  background: #f4f7fa;
-  padding: 0.2rem;
+  /* Mobile adjustments */
+  @media (max-width: 768px) {
+    .body {
+      width: 100%;
+      margin-left: 0;
+      padding: 0.5rem;
+    }
 
-}
+    .body-trimmed {
+      width: 100%;
+      margin-left: 0;
+    }
 
-.body-trimmed {
+    .body-md-screen {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
 
-  width: calc(100% - 16.5625rem);
-  margin-left:16.5625rem;
+  @media (max-width: 480px) {
+    .body {
+      padding: 0.5rem;
+      width: 100%;
+      margin-left: 0;
+    }
 
-}
+    .body-trimmed {
+      width: 100%;
+      margin-left: 0;
+    }
 
-body-md-screen {
-
-  width: calc(100% - 5rem);
-  margin-left: 5rem;
-
-}
-
-
-
+    .body-md-screen {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
 </style>
