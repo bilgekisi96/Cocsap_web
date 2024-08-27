@@ -29,6 +29,7 @@ import { MovingButtonComponent } from './batrack/components/moving-button/moving
 import { LoopButtonComponent } from './batrack/components/loop-button/loop-button.component';
 import { PagelemComponent } from './batrack/components/pagelem/pagelem.component';
 import { PictureSwitcherComponent } from './batrack/components/picture-switcher/picture-switcher.component';
+import { PaymentComponent } from './batrack/components/payment/payment.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { PictureSwitcherComponent } from './batrack/components/picture-switcher/
     MovingButtonComponent,
     LoopButtonComponent,
     PagelemComponent,
-    PictureSwitcherComponent
+    PictureSwitcherComponent,
+    PaymentComponent
 
   ],
   imports: [
