@@ -43,14 +43,12 @@ export class RegisterComponent implements OnInit {
 
   onLogin() {
     if (this.loginForm.valid) {
-      this.router.navigate(['/login']);
       // Perform login action
     }
   }
 
   onRegister() {
     if (this.registerForm.valid) {
-      this.router.navigate(['/login']);
       // Perform registration action
     }
   }
@@ -58,7 +56,7 @@ export class RegisterComponent implements OnInit {
   toggleMode() {
     this.isLoginMode = !this.isLoginMode;
     this.router.navigate(['/login']);
-    console.log("hello world")
+    console.log("register")
   }
 
   onToggleSideNav(data: SideNavToggle): void {
