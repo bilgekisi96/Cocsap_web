@@ -7,20 +7,19 @@ interface SideNavToggle {
   collapsed:boolean;
 }
 
-
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
   styles: [
   ]
 })
+
 export class RegisterComponent implements OnInit {
 
   loginForm: FormGroup | any;
   registerForm: FormGroup | any;
 
   isLoginMode: boolean = true; // State to track the form mode
-  loginCollapsed =true;
 
   screenWidth = 0;
 
@@ -59,17 +58,6 @@ export class RegisterComponent implements OnInit {
     console.log("register")
   }
 
-  onToggleSideNav(data: SideNavToggle): void {
-
-      this.screenWidth = data.screenWidth;
-      data.collapsed = this.loginCollapsed;
-
-  };
-  homefunc(){
-
-    this.router.navigate(['/monitoring'])
-
-    }
 
 
 

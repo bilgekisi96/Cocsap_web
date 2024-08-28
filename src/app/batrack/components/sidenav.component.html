@@ -124,6 +124,11 @@
     background-color: brown;
   }
 
+
+
+
+
+
   /* Mobile adjustments */
   @media (max-width: 768px) {
     .sidenav {
@@ -132,7 +137,7 @@
     position: fixed;
     z-index: 1;
     top: 0;
-    width: 3.8rem;
+    width: 1.5rem;
     height: 100%;
     overflow: hidden;
   }
@@ -140,53 +145,48 @@
   .logo-container {
     display: flex;
     align-items: center;
-    padding: 0.538rem 0.538rem 0 0.538rem;
+    padding: 0.338rem 0.338rem 0 0.338rem;
     width: 100%;
   }
 
   .logo {
     background: #fff;
     text-align: center;
-    width: 1.9rem;
-    min-width: 1.9rem;
-    border-radius: 0.213rem;
-    padding: 0.213rem;
-    font-size: 0.9rem;
-    font-weight: 500;
+    width: 0.8rem;
+    height:0.8rem;
+    min-width: 0.8rem;
+    border-radius: 0.113rem;
+    padding: 0.113rem;
+    font-size: 0.4rem;
+    font-weight: 900;
     cursor: pointer;
     border: none;
   }
 
   .logo-text {
-    margin-left: 0.9rem;
-    font-size: 0.6rem;
-    font-weight: 500;
+    margin-left: 0.3rem;
+    font-size: 0.3rem;
+    font-weight: 700;
     color: #fff;
-  }
-
-  .btn-close {
-    margin-left: 0.7rem;
-    cursor: pointer;
-    width: 1.4rem;
-    height: 1.2rem;
-    border-radius: 40%;
-    background-color: transparent;
-    border: none;
   }
 
   .fa-times {
     color: #fff;
-    font-size: 1rem;
+    font-size: 0.4rem;
+  }
+
+  .sidenav-collapsed {
+    width: 4.5625rem;
   }
 
   .sidenav-nav {
     list-style: none;
-    padding: 0.538rem;
+    padding: 0.238rem;
     margin: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: calc(100% - 5.65rem);
+    height: 2rem;
     cursor: pointer;
   }
 
@@ -198,10 +198,10 @@
     margin-top: 1rem;
     display: flex;
     align-items: center;
-    height: 3rem;
+    height: 1.2rem;
     color: #f3f3f3;
-    transition: all 0.3s ease;
-    border-radius: 0.525rem;
+    transition: all 0.5s ease;
+    border-radius: 0.225rem;
   }
 
   .sidenav-nav-link:hover {
@@ -209,15 +209,18 @@
   }
 
   .sidenav-link-icon {
-    font-size: 1rem;
-    width: 1rem;
-    min-width: 1rem;
-    margin: 0 0.4rem;
+    font-size: 0.5rem;
+    width: 0.5rem;
+    min-width: 0.5rem;
+    margin: 0 0.2rem;
+
     text-align: center;
+
   }
 
   .sidenav-link-text {
-    margin-left: 1rem;
+    margin-left: 0.4rem;
+    font-size: 0.3rem;
   }
 
   .active {
@@ -225,38 +228,105 @@
   }
   }
 
+
+
+
+
   @media (max-width: 380px) {
-    .sidenav {
-      width: 100%;
-      height: auto;
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      padding: 0.5rem;
-    }
+     .sidenav {
+    background: #263238;
+    transition: all 0.5s ease;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    width: 1.5rem;
+    height: 100%;
+    overflow: hidden;
+  }
 
-    .sidenav-collapsed {
-      width: 100%;
-      flex-direction: column;
-    }
+  .logo-container {
+    display: flex;
+    align-items: center;
+    padding: 0.338rem 0.338rem 0 0.338rem;
+    width: 100%;
+  }
 
-    .sidenav-nav {
-      flex-direction: column;
-      justify-content: space-between;
-    }
+  .logo {
+    background: #fff;
+    text-align: center;
+    width: 0.8rem;
+    height:0.8rem;
+    min-width: 0.8rem;
+    border-radius: 0.113rem;
+    padding: 0.113rem;
+    font-size: 0.4rem;
+    font-weight: 900;
+    cursor: pointer;
+    border: none;
+  }
 
-    .sidenav-nav-link {
-      flex-direction: column;
-      align-items: center;
-    }
+  .logo-text {
+    margin-left: 0.3rem;
+    font-size: 0.3rem;
+    font-weight: 700;
+    color: #fff;
+  }
 
-    .sidenav-link-icon {
-      margin: 0;
-    }
+  .fa-times {
+    color: #fff;
+    font-size: 0.4rem;
+  }
 
-    .sidenav-link-text {
-      display: none;
-    }
+  .sidenav-collapsed {
+    width: 4.5625rem;
+  }
+
+  .sidenav-nav {
+    list-style: none;
+    padding: 0.238rem;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 2rem;
+    cursor: pointer;
+  }
+
+  .sidenav-nav-item {
+    width: 100%;
+  }
+
+  .sidenav-nav-link {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    height: 1.2rem;
+    color: #f3f3f3;
+    transition: all 0.5s ease;
+    border-radius: 0.225rem;
+  }
+
+  .sidenav-nav-link:hover {
+    background-color: #808080;
+  }
+
+  .sidenav-link-icon {
+    font-size: 0.5rem;
+    width: 0.5rem;
+    min-width: 0.5rem;
+    margin: 0 0.2rem;
+
+    text-align: center;
+
+  }
+
+  .sidenav-link-text {
+    margin-left: 0.4rem;
+    font-size: 0.3rem;
+  }
+
+  .active {
+    background-color: brown;
+  }
   }
 </style>
