@@ -1,15 +1,24 @@
 
-<select class="select" [(ngModel)]="selectedoption2">
-  <option *ngFor="let option of color_list" [value]="option">{{option}}</option>
-</select>
 
-<button mat-button class="update-button" (click)="updateWaypoints()">Update</button>
 
-<div class="map-frame">
-  <div id="map"></div>
+<div class="map-cast">
+
+  <select class="select" [(ngModel)]="selectedoption2">
+    <option *ngFor="let option of color_list" [value]="option">{{option}}</option>
+  </select>
+
+  <button mat-button class="update-button" (click)="updateWaypoints()">Update</button>
+
+  <div class="map-frame">
+    <div id="map"></div>
+  </div>
+
+
+  <app-payment></app-payment>
+
 </div>
 
-<app-payment></app-payment>
+<div class="map-in"></div>
 
 <style>
 
@@ -39,16 +48,20 @@
 }
 
 .map-frame {
+
   margin-left:6rem
   border: 2px solid black;
   height: 30rem;
-  width: 80rem;
+  width: 70rem;
+
 }
 
-#map {
-  height:      100%;
-  margin-top:  3rem;
-  margin-left: 6rem;
-}
+
+  #map {
+    height:      100%;
+    margin-top:  3rem;
+    margin-left: 6rem;
+
+  }
 
 </style>
