@@ -28,7 +28,7 @@ export class MapComponent implements AfterViewInit {
  editableLayers:any
  selectedoption = 'googleSat';
  selectedoption1 = '#00FFFF';
- selectedoption2 = 'Magento'
+ selectedoption2 = 'Magento';
  layer_kep :any;
 
  private initMap(): void {

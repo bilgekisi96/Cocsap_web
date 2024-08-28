@@ -1,49 +1,51 @@
-<div class="mapentry">
 
-  <select [(ngModel)]="selectedoption2" >
-    <option *ngFor="let option of color_list" [value]="option">{{option}}</option>
-  </select>
+<select class="select" [(ngModel)]="selectedoption2">
+  <option *ngFor="let option of color_list" [value]="option">{{option}}</option>
+</select>
 
- <button mat-button style="margin-left: 2rem" (click)="updateWaypoints()">update</button>
+<button mat-button class="update-button" (click)="updateWaypoints()">Update</button>
 
+<div class="map-frame">
+  <div id="map"></div>
 </div>
 
-<div class="map-container">
-
- <div class="map-frame">
- <div id="map"></div>
- </div>
-
-</div>
 <app-payment></app-payment>
 
 <style>
 
-.mapentry{
- margin-left: 10rem;
- margin-top:  8rem;
+.select {
+
+  margin-top:18rem;
+  margin-left:6rem;
+  width: 6.5rem;
+  font-size: 1rem;
+  border-radius: 1.5rem;
+  height: 3rem;
+  color: blue;
+  border: 0.12rem solid #E40909;
+
 }
 
-.map-container {
+.update-button {
 
- top: 7rem;
- margin-left: 5rem;
- right: 0;
- bottom: 0;
- width: 60rem;
- height: 30rem;
-  background-clip: padding-box;
+  margin-left:6rem;
+  width: 6.5rem;
+  font-size: 1rem;
+  border-radius: 1.5rem;
+  height: 3rem;
+  color: blue;
+  border: 0.12rem solid #E40909;
+
 }
 
 .map-frame {
- border: 2px solid black;
- height: 100%;
-    background-clip: padding-box;
+  border: 2px solid black;
+  height: 30rem;
+  max-width: 100%;
 }
 
 #map {
- height: 100%;
-    background-clip: padding-box;
+  height: 100%;
 }
 
 </style>
