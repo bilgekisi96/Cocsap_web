@@ -30,6 +30,7 @@ import { LoopButtonComponent } from './batrack/components/loop-button/loop-butto
 import { PagelemComponent } from './batrack/components/pagelem/pagelem.component';
 import { PictureSwitcherComponent } from './batrack/components/picture-switcher/picture-switcher.component';
 import { PaymentComponent } from './batrack/components/payment/payment.component';
+import {InboxService} from "./batrack/services/inbox.service";
 
 @NgModule({
   declarations: [
