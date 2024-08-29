@@ -1,10 +1,22 @@
-import {AfterViewInit, Component, HostListener} from '@angular/core';
+import {AfterViewInit, Component, HostListener ,Input} from '@angular/core';
 import * as L from 'leaflet';
 import 'leaflet-routing-machine';
 import {FeatureGroup, LatLng, LatLngExpression} from 'leaflet';
 import {FormControl} from "@angular/forms";
 import "leaflet-draw";
 import { saveAs } from 'file-saver';
+import { Message } from './message.model';
+import {InboxService} from '../'
+
+interface Message {
+  id: number;
+  sender: string;
+  subject: string;
+  body: string;
+  timestamp: Date;
+  read: boolean;
+}
+
 
 @Component({
  selector: 'app-map',
@@ -132,7 +144,11 @@ export class MapComponent implements AfterViewInit {
 
  }
 
- constructor() {}
+ @Input() title: string = 'Map Tracking System';
+ @Input() description: string = 'This map engaging for your mapping adjustments';
+
+ messages: Message[] = [];
+ constructor(private inboxService: InboxService) {}
 
  // Listen for click events on the document
   @HostListener('document:click', ['$event'])
@@ -162,10 +178,21 @@ export class MapComponent implements AfterViewInit {
  ngAfterViewInit(): void {
 
   this.initMap();
+  this.inboxService.getMessages().subscribe((messages:any) => {
+      this.messages = messages;
+    });
 
  }
 
+  onSelectMessage(message: Message): void {
+    this.inboxService.markAsRead(message.id);
+    // Additional logic to display or open the message
+  }
 
+  onDeleteMessage(message: Message): void {
+    this.inboxService.deleteMessage(message.id);
+    this.messages = this.messages.filter((msg:any) => msg.id !== message.id);
+  }
 
 
 
