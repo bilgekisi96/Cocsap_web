@@ -1,7 +1,14 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { Message } from './message.model';
 
+interface Message {
+  id: number;
+  sender: string;
+  subject: string;
+  body: string;
+  timestamp: Date;
+  read: boolean;
+}
 
 @Injectable({
   providedIn: 'root'

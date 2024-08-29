@@ -5,8 +5,7 @@ import {FeatureGroup, LatLng, LatLngExpression} from 'leaflet';
 import {FormControl} from "@angular/forms";
 import "leaflet-draw";
 import { saveAs } from 'file-saver';
-import { Message } from './message.model';
-import {InboxService} from '../'
+import {InboxService} from "../../services/inbox.service";
 
 interface Message {
   id: number;
