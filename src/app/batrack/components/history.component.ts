@@ -13,14 +13,17 @@ export class HistoryComponent implements OnInit {
 
   handlePayment(){}
   async makePostRequest(datam:any) {
-    const urlpost = 'https://tekelektrikcompany.com/api/api/auth/login/';
+    const urlpost = 'https://tekelektrikcompany.com/api/auth/login/';
     const requestData = {data: datam};
 
     const username = 'chatbot';
     const password = 'wrong';
     const basicAuth = 'Basic ' + btoa(username + ':' + password);
 
-    const response = await axios.post(urlpost, requestData, {});
+    const response = await axios.post(urlpost, requestData, {
+      headers: {
+        'Authorization': basicAuth
+      }});
 
     console.log('Status Code:', response.status);
     console.log('Response JSON:', response.data);
