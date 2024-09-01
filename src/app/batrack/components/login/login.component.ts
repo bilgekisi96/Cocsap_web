@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {  Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import axios from "axios";
 
 
 interface SideNavToggle {
@@ -33,17 +34,28 @@ export class LoginComponent implements OnInit{
     });
   }
 
-  onLogin(): void {
+  async onLogin() {
 
     if (this.loginForm.valid) {
+
       const username = this.loginForm.get('username')?.value;
       const password = this.loginForm.get('password')?.value;
       console.log('Username:', username);
       console.log('Password:', password);
 
+      const urlpost = 'https://tekelektrikcompany.com/api/api/auth/login/';
+      const requestData = {"username":username,"password":password}
 
-      const token = 'cocsapientis' + username + password
-      localStorage.setItem('authToken',token)
+      //const username = 'chatbot';
+      //const password = 'wrong';
+      //const basicAuth = 'Basic ' + btoa(username + ':' + password);
+
+      const response = await axios.post(urlpost, requestData, {});
+
+      console.log('Status Code:', response.status);
+      console.log('Response JSON:', response.data);
+
+
       // Add your login logic here
 
     }
@@ -54,10 +66,5 @@ export class LoginComponent implements OnInit{
     this.router.navigate(['/register']); // Adjust this to your actual register route
   }
 
-  homefunc(){
-
-    this.router.navigate(['/monitoring'])
-
-    }
 
 }
