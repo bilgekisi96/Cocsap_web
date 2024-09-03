@@ -4,6 +4,9 @@
   <button mat-button class="login-button" style="color:#6FFD00" (click)="setView('list')">List View</button>
 </div>
 
+
+
+
 <div [ngClass]="currentViewClass">
   <div *ngFor="let picture of pictures" class="picture-container">
     <img [src]="picture" alt="Picture" />
@@ -22,7 +25,7 @@
 }
 
 button {
-  margin: 0 5px;
+  margin-left:2.5rem;
 }
 
 .grid-view {
@@ -33,6 +36,7 @@ button {
 .grid-view .picture-container {
   flex: 1 1 30%; /* Adjust the size of the grid items */
   margin: 10px;
+  margin-left:2rem;
 }
 
 .list-view {
@@ -40,6 +44,7 @@ button {
 }
 
 .list-view .picture-container {
+  margin-left:1rem;
   margin-bottom: 1.25rem;
 }
 
@@ -58,4 +63,22 @@ button {
     border: 0.12rem solid #E40909;
   }
 
+   @media (max-width: 480px) {
+
+
+     .login-button {
+    width: 4rem;
+    font-size: 0.5rem;
+    border-radius: 1rem;
+    height: 2rem;
+    color: white;
+    border: 0.12rem solid #E40909;
+  }
+
+  .grid-view .picture-container {
+  flex: 1 1 30%; /* Adjust the size of the grid items */
+  margin-left:2rem;
+}
+
+   }
 </style>

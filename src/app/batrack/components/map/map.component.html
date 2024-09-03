@@ -159,4 +159,70 @@
   background-color: #ff1a1a;
 }
 
+@media (max-width: 480px) {
+
+
+  .header {
+  margin-bottom: 1rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+  .inbox-container {
+  padding: 1rem;
+  margin-left:5rem;
+  margin-top:10rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  max-width: 45rem;
+  background-color: #f9f9f9;
+}
+
+.message-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.message-list li {
+  padding: 0.5rem;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.message-list li.read {
+  background-color: #e0e0e0;
+}
+
+.message-list li:hover {
+  background-color: #f0f0f0;
+}
+
+.timestamp {
+  font-size: 0.8rem;
+  color: #666;
+  margin-left: 1rem;
+}
+
+.delete-button {
+  background-color: #ff4c4c;
+  border: none;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.delete-button:hover {
+  background-color: #ff1a1a;
+}
+
+}
+
+
 </style>
