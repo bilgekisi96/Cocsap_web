@@ -43,17 +43,14 @@ export class LoginComponent implements OnInit{
       console.log('Username:', username);
       console.log('Password:', password);
 
-      const urlpost = 'https://tekelektrikcompany.com/api/auth/login/';
+      const urlpost = 'https://tekelektrikcompany.com/api/auth/login';
       const requestData = {"username":username,"password":password}
 
       //const username = 'chatbot';
       //const password = 'wrong';
       const basicAuth = 'Basic ' + btoa(username + ':' + password);
 
-      const response = await axios.post(urlpost, requestData, {
-        headers: {
-        'Authorization': basicAuth
-      }});
+      const response = await axios.post(urlpost, requestData);
 
       console.log('Status Code:', response.status);
       console.log('Response JSON:', response.data);
