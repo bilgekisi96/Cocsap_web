@@ -17,7 +17,8 @@
 
       <mat-card class="note-card">
         <mat-card-header class="card-header">
-          <mat-card-title>Hedefimiz</mat-card-title>
+          <mat-icon class="note-icon">star_rate</mat-icon>
+          <mat-card-title>Hedeflerimiz</mat-card-title>
         </mat-card-header>
         <mat-card-content>
           Ürünlerimizin her türlü ticari ve
@@ -29,6 +30,7 @@
 
       <mat-card class="note-card">
         <mat-card-header class="card-header">
+          <mat-icon class="note-icon">star_rate</mat-icon>
           <mat-card-title>Hakkımızda</mat-card-title>
         </mat-card-header>
         <mat-card-content>
@@ -41,7 +43,9 @@
 
       <mat-card class="note-card">
         <mat-card-header class="card-header">
+          <mat-icon class="note-icon">star_rate</mat-icon>
           <mat-card-title>Vizyonumuz</mat-card-title>
+
         </mat-card-header>
         <mat-card-content>
           Cocsapientis yazılım olarak Web tasarım geliştirme E-Ticaret ödeme gibi hizmetlerde
@@ -96,6 +100,16 @@
   </div>
 </div>
 
+
+<!-- Footer Section -->
+<div class="footer">
+  <div class="footer-content">
+    <span class="company-name">Cocsapientis Yazılım</span>
+    <span class="contact-info">Tel: +90 123 456 78 90 | Email: info@cocsapientis.com</span>
+  </div>
+</div>
+
+
 <!-- Styles -->
 <style>
 
@@ -149,12 +163,11 @@
     margin-bottom: 1.3rem;
   }
 
-
-  .cart-mat {
-
-  margin-top: 3rem;
-
-
+  .note-icon {
+    font-size: 1.5rem;
+    margin-left:1rem;
+    color: #ffab40; /* Match the border color */
+    vertical-align: middle; /* Align the icon with the text */
   }
 
   .payment-page {
@@ -270,6 +283,36 @@
 
 
 
+  .footer {
+  width: 100%;
+  background-color: #000; /* Black band */
+  color: white;
+  padding: 1rem 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.company-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.contact-info {
+  font-size: 1rem;
+}
+
+
   @media (max-width: 768px) {
     .payment-title {
       font-size: 1.3rem;
@@ -283,6 +326,19 @@
       font-size: 1rem;
       padding: 0.75rem;
     }
+
+    .footer-content {
+    flex-direction: column;
+  }
+
+  .company-name,
+  .contact-info {
+    font-size: 1rem;
+  }
+
+  .contact-info {
+    margin-top: 0.5rem;
+  }
   }
 
   @media (max-width: 480px) {
@@ -331,6 +387,15 @@
     .cvc-code input {
       width: 15rem;
     }
+
+    .company-name,
+  .contact-info {
+    font-size: 0.9rem;
+  }
+
+  .contact-info {
+    margin-top: 0.3rem;
+  }
 
   }
 </style>
