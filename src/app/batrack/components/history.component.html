@@ -1,21 +1,57 @@
 <div class="urun">
 
-  <mat-label class="label">ÜRÜNLERİMİZ</mat-label>
+  <mat-card class="header">
+    <mat-label class="label-mat">ÜRÜNLERİMİZ</mat-label>
+  </mat-card>
 
-  <mat-card class="cart">Ürünlerimizin her türlü ticari ve
-    kişisel işletmelere uyumlu sürümleri
-    tasarlanıp kullanıcılarımıza uygun hale
-    getirilmektedir</mat-card>
+
+  <mat-card class="paragraph">
+
+
+
+  </mat-card>
+
+
+
+  <div class="card-container">
+
+      <mat-card class="note-card">
+        <mat-card-header class="card-header">
+          <mat-card-title>Hedefimiz</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          Ürünlerimizin her türlü ticari ve
+        kişisel işletmelere uyumlu sürümleri
+        tasarlanıp kullanıcılarımıza uygun hale
+        getirilmektedir
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card class="note-card">
+        <mat-card-header class="card-header">
+          <mat-card-title>Hakkımızda</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          This is the second note.
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card class="note-card">
+        <mat-card-header class="card-header">
+          <mat-card-title>Vizyonumuz</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          This is the third note.
+        </mat-card-content>
+      </mat-card>
+
+  </div>
+
+
+
 </div>
 
-
-
 <app-picture-switcher></app-picture-switcher>
-
-
-
-
-
 
 <!-- src/app/payment/payment.component.html -->
 <div class="payment-page">
@@ -61,8 +97,60 @@
 
   .urun{
 
-    margin-left:5rem;
-    margin-top:10rem;
+      margin-left:3rem;
+      margin-top:15rem;
+
+  }
+
+  .header {
+    margin-left:33rem;
+    height:5rem;
+    width: 40rem;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #6FFD00;
+    border-radius: 2rem;
+  }
+
+  .label-mat {
+    margin-top:0.5rem;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .paragraph {
+    margin-top:5rem;
+  }
+
+
+  .card-container {
+    display: flex;
+    justify-content: space-around; /* Adjust space between the cards */
+    flex-wrap: wrap; /* Allow wrapping if the screen is too small */
+    gap: 1.1rem; /* Space between each card */
+    margin: 1.2rem 0; /* Add some margin above and below the container */
+  }
+
+  .note-card {
+    width: 20rem; /* Fixed width for each card */
+    padding: 0.9rem;
+    background-color: #fff8e1;
+    border-left: 0.4rem solid #ffab40;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-size: 1.1rem;
+  }
+
+  .card-header {
+    margin-bottom: 1.3rem;
+  }
+
+
+  .cart-mat {
+
+  margin-top: 3rem;
+
+
   }
 
   .payment-page {
