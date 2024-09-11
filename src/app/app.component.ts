@@ -5,14 +5,9 @@ import { interval, takeUntil, timer } from 'rxjs';
 interface SideNavToggle {
   screenWidth: number;
   collapsed: boolean;
-
 }
+interface TogglePage {collapsed:boolean}
 
-interface TogglePage {
-
-  collapsed:boolean
-
-}
 
 @Component({
   selector: 'app-root',
@@ -24,13 +19,14 @@ export class AppComponent implements OnInit{
   constructor(private router: Router) {
   }
   title = 'COCSAPIENTIS';
+
   isSideNavCollapsed = false;
   screenWidth = 0;
 
   pagecollapsed = true;
 
   ngOnInit() {
-      this.router.navigate(['/monitoring'])
+      this.router.navigate(['/login'])
   }
 
   onToggleSideNav(data: SideNavToggle): void {
@@ -39,4 +35,8 @@ export class AppComponent implements OnInit{
       this.isSideNavCollapsed = data.collapsed;
 
   };
+
+
+
+
 }
