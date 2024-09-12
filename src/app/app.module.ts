@@ -31,6 +31,7 @@ import { PagelemComponent } from './batrack/components/pagelem/pagelem.component
 import { PictureSwitcherComponent } from './batrack/components/picture-switcher/picture-switcher.component';
 import { PaymentComponent } from './batrack/components/payment/payment.component';
 import {InboxService} from "./batrack/services/inbox.service";
+import {MatDialogActions, MatDialogModule} from "@angular/material/dialog";
 
 @NgModule({
   declarations: [
@@ -53,23 +54,25 @@ import {InboxService} from "./batrack/services/inbox.service";
     PaymentComponent
 
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatInputModule,
-    FormsModule,
-    MatIconModule,
-    MatFormFieldModule,
-    MatButtonModule,
-    MatProgressSpinnerModule,
-    MatCardModule,
-    MatMenuModule,
-    MatListModule,
-    ReactiveFormsModule,
-    MatToolbarModule,
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MatInputModule,
+        FormsModule,
+        MatIconModule,
+        MatFormFieldModule,
+        MatButtonModule,
+        MatProgressSpinnerModule,
+        MatCardModule,
+        MatMenuModule,
+        MatListModule,
+        ReactiveFormsModule,
+        MatToolbarModule,
+        MatDialogModule,
 
-  ],
+
+    ],
   providers: [{provide: LocationStrategy,useClass:HashLocationStrategy}],
   bootstrap: [AppComponent],
   schemas:[
