@@ -8,15 +8,20 @@ import {HistoryComponent} from "./batrack/components/history.component";
 import {MapComponent} from "./batrack/components/map/map.component";
 import {LoginComponent} from "./batrack/components/login/login.component";
 import {RegisterComponent} from "./batrack/components/register/register.component";
+import {AuthGuard} from "./batrack/services/auth.guard"
 
 const routes: Routes = [
 
       {path:'login',component:LoginComponent},
       //{path:'',component:ApplayoutComponent},
       {path:'register',component:RegisterComponent},
-      {path:'history',component:HistoryComponent},
-      {path:'monitoring',component:MonitoringComponent},
-      {path:'map',component:MapComponent},
+
+      {path:'history',component:HistoryComponent,canActivate: [AuthGuard]},
+      {path:'monitoring',component:MonitoringComponent,canActivate: [AuthGuard]},
+      {path:'map',component:MapComponent,canActivate: [AuthGuard]},
+
+      { path: '', redirectTo: '/login', pathMatch: 'full' }, // Default route redirect to login
+      { path: '**', redirectTo: '/login' }
 
 
 ];

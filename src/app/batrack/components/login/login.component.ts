@@ -12,7 +12,7 @@ import {
   MatDialogTitle
 } from "@angular/material/dialog";
 import {MatButtonModule} from "@angular/material/button";
-
+import {AuthService} from "../../services/auth.service"
 
 interface SideNavToggle {
   screenWidth:number;
@@ -36,7 +36,7 @@ export class LoginComponent implements OnInit {
   status : number | undefined | string;
 
   loginForm: FormGroup | any;
-  constructor(private router:Router,private fb: FormBuilder) {}
+  constructor(private router:Router,private fb: FormBuilder,private authService:AuthService) {}
 
   readonly dialog = inject(MatDialog);
 
@@ -75,6 +75,9 @@ export class LoginComponent implements OnInit {
         this.status = "Your Access verified Successfully"
         this.openDialog()
         this.fetchData(response)
+
+        this.authService.login();
+        this.router.navigate(['/monitoring']); // Redirect to home after login
       }
 
       catch(error){
