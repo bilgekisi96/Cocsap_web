@@ -20,14 +20,14 @@ const routes: Routes = [
       {path:'monitoring',component:MonitoringComponent,canActivate: [AuthGuard]},
       {path:'map',component:MapComponent,canActivate: [AuthGuard]},
 
-      { path: '', redirectTo: '/login', pathMatch: 'full' }, // Default route redirect to login
-      { path: '**', redirectTo: '/login' }
+      { path: '**', redirectTo: 'login' }// Default route redirect to login
+
 
 
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,{ useHash: false })],
   exports: [RouterModule],
   providers:[]
 })

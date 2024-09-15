@@ -10,7 +10,7 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { RealtimeComponent } from './batrack/components/realtime.component';
 import { MonitoringComponent } from './batrack/components/monitoring.component';
 import { HistoryComponent } from './batrack/components/history.component';
-import {HashLocationStrategy,LocationStrategy} from "@angular/common";
+import {HashLocationStrategy, LocationStrategy, PathLocationStrategy} from "@angular/common";
 import { MapComponent } from './batrack/components/map/map.component';
 import {MatInputModule} from "@angular/material/input";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
@@ -73,7 +73,7 @@ import {MatDialogActions, MatDialogModule} from "@angular/material/dialog";
 
 
     ],
-  providers: [{provide: LocationStrategy,useClass:HashLocationStrategy}],
+  providers: [{provide: LocationStrategy,useClass:PathLocationStrategy}],
   bootstrap: [AppComponent],
   schemas:[
     CUSTOM_ELEMENTS_SCHEMA
