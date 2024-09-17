@@ -73,7 +73,7 @@ import {MatDialogActions, MatDialogModule} from "@angular/material/dialog";
 
 
     ],
-  providers: [{provide: LocationStrategy,useClass:PathLocationStrategy}],
+  providers: [{provide: LocationStrategy,useClass:HashLocationStrategy}],
   bootstrap: [AppComponent],
   schemas:[
     CUSTOM_ELEMENTS_SCHEMA
