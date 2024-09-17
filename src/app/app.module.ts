@@ -1,7 +1,7 @@
 import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
+import {AppRoutingModule} from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BodyComponent } from './batrack/components/body.component';
 import { SidenavComponent } from './batrack/components/sidenav.component';
@@ -73,7 +73,6 @@ import {MatDialogActions, MatDialogModule} from "@angular/material/dialog";
 
 
     ],
-  providers: [{provide: LocationStrategy,useClass:HashLocationStrategy}],
   bootstrap: [AppComponent],
   schemas:[
     CUSTOM_ELEMENTS_SCHEMA

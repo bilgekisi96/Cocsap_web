@@ -13,28 +13,25 @@ import {AuthGuard} from "./batrack/services/auth.guard"
 const routes: Routes = [
 
 
-
+      {path:'',pathMatch:'full',redirectTo:'login'},
       {path:'login',component:LoginComponent},
       //{path:'',component:ApplayoutComponent},
       {path:'register',component:RegisterComponent},
 
       {path:'history',component:HistoryComponent,canActivate: [AuthGuard]},
       {path:'monitoring',component:MonitoringComponent,canActivate: [AuthGuard]},
-      {path:'map',component:MapComponent,canActivate: [AuthGuard]},
-      {path:'',redirectTo:'/login',pathMatch:'full'},
-      { path: '**',redirectTo:'/login' }// Default route redirect to login
+      {path:'map',component:MapComponent,canActivate: [AuthGuard]}
+
+
 
 
 
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes,{useHash:true})],
+  imports: [RouterModule.forRoot(routes,{useHash:false})],
   exports: [RouterModule],
   providers:[]
 })
-export class AppRoutingModule {
+export class AppRoutingModule {}
 
-
-
-}
