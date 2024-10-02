@@ -61,7 +61,7 @@ export class LoginComponent implements OnInit {
       console.log('Username:', username);
       console.log('Password:', password);
 
-      const urlpost = 'https://tekelektrikcompany.com/api/auth/login';
+      const urlpost = 'http://biococmedikal.com/customerapi/auth/login';
       const requestData = {"username":username,"password":password}
 
       try {
@@ -96,7 +96,7 @@ export class LoginComponent implements OnInit {
 
     try {
 
-      const response = await axios.get('https://tekelektrikcompany.com/api/auth/login', {
+      const response = await axios.get('http://biococmedikal.com/customerapi/auth/login', {
         method: 'GET',
         headers: {
           'Authorization': basicAuth
