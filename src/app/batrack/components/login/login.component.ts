@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component, Inject, inject, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, Component, EventEmitter, Inject, inject, OnInit, Output} from '@angular/core';
 import {  Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import axios from "axios";
@@ -14,9 +14,8 @@ import {
 import {MatButtonModule} from "@angular/material/button";
 import {AuthService} from "../../services/auth.service"
 
-interface SideNavToggle {
-  screenWidth:number;
-  collapsed:boolean;
+interface LoginToggle {
+  Loginstatus: number | undefined;
 }
 
 @Component({
@@ -32,6 +31,10 @@ export class LoginComponent implements OnInit {
   screenWidth = 0;
   username: string | undefined;
   password: string | undefined;
+
+  loginstatus=0;
+
+  @Output() onToggleLogin: EventEmitter<LoginToggle> = new EventEmitter();
 
   status : number | undefined | string;
 
@@ -51,6 +54,10 @@ export class LoginComponent implements OnInit {
     this.dialog.open(DialogElementsExampleDialog, {
       data: { status: this.status }});
   }
+
+
+
+
 
   async onLogin() {
 
@@ -76,8 +83,12 @@ export class LoginComponent implements OnInit {
         this.openDialog()
         this.fetchData(response)
 
+        this.loginstatus = 1
+        this.onToggleLogin.emit({Loginstatus:this.loginstatus})
+
         this.authService.login();
         this.router.navigate(['/monitoring']); // Redirect to home after login
+
       }
 
       catch(error){

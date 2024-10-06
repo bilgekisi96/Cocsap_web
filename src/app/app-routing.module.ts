@@ -10,14 +10,15 @@ import {LoginComponent} from "./batrack/components/login/login.component";
 import {RegisterComponent} from "./batrack/components/register/register.component";
 import {AuthGuard} from "./batrack/services/auth.guard"
 
+
 const routes: Routes = [
 
 
       {path:'',pathMatch:'full',redirectTo:'login'},
       {path:'login',component:LoginComponent},
-      //{path:'',component:ApplayoutComponent},
       {path:'register',component:RegisterComponent},
 
+      {path:'realtime',component:RealtimeComponent,canActivate: [AuthGuard]},
       {path:'history',component:HistoryComponent,canActivate: [AuthGuard]},
       {path:'monitoring',component:MonitoringComponent,canActivate: [AuthGuard]},
       {path:'map',component:MapComponent,canActivate: [AuthGuard]}

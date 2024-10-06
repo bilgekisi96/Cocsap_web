@@ -5,6 +5,12 @@ export const navbarData = [
       icon:'fal fa-home',
       label:'Home'
   },
+
+  {
+      routeLink:'/realtime',
+      icon:'fal fa-clipboard-list',
+      label:'production'
+  },
   {
       routeLink:'/history',
       icon:'fal fa-box-open',

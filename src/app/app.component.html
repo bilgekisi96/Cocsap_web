@@ -1,6 +1,11 @@
-<app-pagelem [displayed]="pagecollapsed"></app-pagelem>
+
+<app-pagelem></app-pagelem>
+
+<app-login (onToggleLogin)="onToggleLogin($event)" [ngStyle]="{'display':'none'}"></app-login>
 
 <app-sidenav (onToggleSideNav)="onToggleSideNav($event)"></app-sidenav>
+
+
 
 <app-body
   [collapsed]="isSideNavCollapsed"

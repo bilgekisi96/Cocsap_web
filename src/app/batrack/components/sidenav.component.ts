@@ -44,6 +44,7 @@ interface SideNavToggle {
 export class SidenavComponent implements OnInit {
 
   @Output() onToggleSideNav: EventEmitter<SideNavToggle> = new EventEmitter();
+
   collapsed = false;
   screenWidth = 0;
 
@@ -68,6 +69,8 @@ export class SidenavComponent implements OnInit {
     this.collapsed = !this.collapsed;
     this.onToggleSideNav.emit({collapsed: this.collapsed, screenWidth:this.screenWidth});
   };
+
+
 
   closeSidenav(): void {
     this.collapsed = false

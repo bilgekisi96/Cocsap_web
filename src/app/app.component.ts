@@ -6,6 +6,10 @@ interface SideNavToggle {
   screenWidth: number;
   collapsed: boolean;
 }
+
+interface LoginToggle {
+  Loginstatus:number | undefined;
+}
 interface TogglePage {collapsed:boolean}
 
 
@@ -22,11 +26,20 @@ export class AppComponent implements OnInit{
 
   isSideNavCollapsed = false;
   screenWidth = 0;
-
-  pagecollapsed = true;
+  loginstatus:number | undefined;
 
   ngOnInit() {
-      this.router.navigate(['/login'])
+      if(this.loginstatus !== 1){
+        this.router.navigate(['/login'])
+      }
+      else {
+        timer(5000).subscribe(x=>{
+          this.loginstatus = 1
+        })
+        this.loginstatus = 0
+      }
+
+
   }
 
   onToggleSideNav(data: SideNavToggle): void {
@@ -35,6 +48,12 @@ export class AppComponent implements OnInit{
       this.isSideNavCollapsed = data.collapsed;
 
   };
+
+  onToggleLogin(data:LoginToggle): void {
+
+    this.loginstatus = data.Loginstatus
+
+  }
 
 
 
