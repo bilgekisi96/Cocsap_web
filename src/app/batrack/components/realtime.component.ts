@@ -23,6 +23,8 @@ export class RealtimeComponent implements OnInit {
 
   }
 
+  @Output() cartout: EventEmitter<Product> = new EventEmitter();
+
   products: Product[] = [
     { name: 'Ürün 1', price: 50, quantity: 1, image: 'assets/folder1/@cocsapientis.jpg' },
     { name: 'Ürün 2', price: 30, quantity: 1, image: 'assets/folder1/@cocsapientis.png' },
@@ -73,7 +75,7 @@ export class RealtimeComponent implements OnInit {
     }
   }
 
-
+  this.cartout.emit(this.cart)
 
 
 }

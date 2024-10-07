@@ -1,4 +1,11 @@
-import { Component } from '@angular/core';
+import { Component,EventEmitter,Output } from '@angular/core';
+
+interface Product {
+  name: string;
+  price: number;
+  quantity: number;
+  image: string;  // Ürün resim yolu
+}
 
 @Component({
   selector: 'app-sepet',
@@ -7,5 +14,11 @@ import { Component } from '@angular/core';
   ]
 })
 export class SepetComponent {
+
+
+  Oncartsidenav(data:Product){
+
+
+    }
 
 }
