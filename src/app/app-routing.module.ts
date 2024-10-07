@@ -18,7 +18,7 @@ const routes: Routes = [
       {path:'login',component:LoginComponent},
       {path:'register',component:RegisterComponent},
 
-      {path:'realtime',component:RealtimeComponent,canActivate: [AuthGuard]},
+      {path:'realtime',component:RealtimeComponent},
       {path:'history',component:HistoryComponent,canActivate: [AuthGuard]},
       {path:'monitoring',component:MonitoringComponent,canActivate: [AuthGuard]},
       {path:'map',component:MapComponent,canActivate: [AuthGuard]}

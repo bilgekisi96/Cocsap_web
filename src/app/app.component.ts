@@ -30,7 +30,7 @@ export class AppComponent implements OnInit{
 
   ngOnInit() {
       if(this.loginstatus !== 1){
-        this.router.navigate(['/login'])
+        this.router.navigate(['/realtime'])
       }
       else {
         timer(5000).subscribe(x=>{

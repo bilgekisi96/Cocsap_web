@@ -1,4 +1,3 @@
-
 <div class="container">
   <div class="image-container">
     <img src="assets/bg4.jpg" alt="techno">
@@ -6,38 +5,38 @@
 
   <div class="login-container">
     <mat-card>
-
       <mat-card-header style="margin:1rem">
-        <mat-card-title >Login</mat-card-title>
+        <mat-card-title>Login</mat-card-title>
       </mat-card-header>
 
       <mat-card-content>
         <form [formGroup]="loginForm">
 
+          <!-- Username Field -->
           <mat-form-field class="inputbut" appearance="fill">
             <mat-label class="labelfont">Username</mat-label>
+            <mat-icon matPrefix>person</mat-icon>
             <input matInput formControlName="username">
           </mat-form-field>
 
+          <!-- Password Field -->
           <mat-form-field class="inputbut" appearance="fill">
             <mat-label class="labelfont">Password</mat-label>
+            <mat-icon matPrefix>lock</mat-icon>
             <input matInput type="password" formControlName="password">
           </mat-form-field>
-
 
         </form>
       </mat-card-content>
 
       <div style="display: flex; justify-content: space-between; margin: 1rem;">
-        <button mat-raised-button color="primary" class ="buttoner" type="submit" (click)="onLogin()">Login</button>
-        <button mat-raised-button color="accent" class ="buttoner" (click)="onRegister()">Register</button>
+        <button mat-raised-button color="primary" class="buttoner" type="submit" (click)="onLogin()">Login</button>
+        <button mat-raised-button color="accent" class="buttoner" (click)="onRegister()">Register</button>
       </div>
-
 
     </mat-card>
   </div>
 </div>
-
 
 <div class="footer">
   <div class="footer-content">
@@ -45,7 +44,6 @@
     <span class="contact-info">Tel: +90 553 588 15 68 | Email: info@cocsapientis.com</span>
   </div>
 </div>
-
 
 <style>
 
@@ -67,7 +65,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0.5; /* Adjust the opacity of the image */
+    opacity: 0.5;
     transition: opacity 0.5s ease;
   }
 
@@ -80,7 +78,7 @@
 
   mat-card {
     width: 25rem;
-    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    background-color: rgba(255, 255, 255, 0.8);
     box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
   }
 
@@ -89,144 +87,133 @@
   }
 
   .buttoner {
-    width:10rem;
-    height:2rem;
+    width: 10rem;
+    height: 2rem;
   }
 
   .inputbut {
-    width:20rem;
-    height:5rem;
-  }
-
-
-  .footer {
-  width: 100%;
-  background-color: #000;
-  color: white;
-  padding: 1rem 0;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  text-align: center;
-  z-index: 1;
-}
-
-.footer-content {
-  max-width: 80rem;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 1rem;
-  z-index: 1;
-}
-
-.company-name {
-  font-size: 1.2rem;
-  font-weight: bold;
-  z-index: 1;
-}
-
-.contact-info {
-  font-size: 1rem;
-  z-index: 1;
-}
-
-@media (max-width: 480px) {
-
- .container {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .image-container {
-    width: 100%;
-    height: 100%;
-  }
-
-  .image-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.5; /* Adjust the opacity of the image */
-    transition: opacity 0.5s ease;
-  }
-
-  .login-container {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  mat-card {
-    width: 17rem;
-    height: 18rem;
-    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
-    box-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.2);
-  }
-
-  mat-card-header {
-    text-align: center;
-  }
-
-  .buttoner {
-    width:5rem;
-    height:2rem;
-  }
-
-  .inputbut {
-    width:10rem;
-    height:4.5rem;
-  }
-
-  .labelfont{
-    font-size: 0.8rem;
-    text-align: center;
+    width: 20rem;
+    height: 5rem;
   }
 
   .footer {
-  width: 100%;
-  background-color: #000;
-  color: white;
-  padding: 0.4rem 0;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  text-align: center;
-  z-index: 1;
-}
+    width: 100%;
+    background-color: #000;
+    color: white;
+    padding: 1rem 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    z-index: 1;
+  }
 
-.footer-content {
-  max-width: 40rem;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 1rem;
-  z-index: 1;
-}
+  .footer-content {
+    max-width: 80rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    z-index: 1;
+  }
 
-.company-name {
-  font-size: 0.4rem;
-  font-weight: bold;
-  z-index: 1;
-}
+  .company-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    z-index: 1;
+  }
 
-.contact-info {
-  font-size: 0.4rem;
-  z-index: 1;
-}
+  .contact-info {
+    font-size: 1rem;
+    z-index: 1;
+  }
 
+  @media (max-width: 480px) {
 
+    .container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-}
+    .image-container {
+      width: 100%;
+      height: 100%;
+    }
 
+    .image-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.5;
+      transition: opacity 0.5s ease;
+    }
 
+    .login-container {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
+    mat-card {
+      width: 17rem;
+      height: 18rem;
+      background-color: rgba(255, 255, 255, 0.8);
+      box-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.2);
+    }
+
+    .buttoner {
+      width: 5rem;
+      height: 2rem;
+    }
+
+    .inputbut {
+      width: 10rem;
+      height: 4.5rem;
+    }
+
+    .labelfont {
+      font-size: 0.8rem;
+      text-align: center;
+    }
+
+    .footer {
+      width: 100%;
+      background-color: #000;
+      color: white;
+      padding: 0.4rem 0;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      text-align: center;
+      z-index: 1;
+    }
+
+    .footer-content {
+      max-width: 40rem;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 1rem;
+      z-index: 1;
+    }
+
+    .company-name {
+      font-size: 0.4rem;
+      font-weight: bold;
+      z-index: 1;
+    }
+
+    .contact-info {
+      font-size: 0.4rem;
+      z-index: 1;
+    }
+  }
 
 </style>
