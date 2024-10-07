@@ -1,20 +1,23 @@
+
+
 <div class="product-list">
-  <h2>Ürünler</h2>
 
   <div class="product-item" *ngFor="let product of products">
     <div class="product-card">
       <img [src]="product.image" alt="{{ product.name }}" class="product-image" />
+
       <div class="product-info">
-        <h3>{{ product.name }}</h3>
-        <p>Fiyat: \${{ product.price }}</p>
+          <h3>{{ product.name }}</h3>
+          <p>Fiyat: \${{ product.price }}</p>
 
-        <!-- Miktar Seçimi -->
-        <label for="quantity-{{ product.name }}">Miktar: </label>
-        <input type="number" id="quantity-{{ product.name }}" [(ngModel)]="product.quantity" min="1" />
+          <!-- Miktar Seçimi -->
+          <label for="quantity-{{ product.name }}">Miktar: </label>
+          <input type="number" id="quantity-{{ product.name }}" [(ngModel)]="product.quantity" min="1" />
 
-        <!-- Sepete Ekleme -->
-        <button (click)="addToCart(product, product.quantity)">Sepete Ekle</button>
+          <!-- Sepete Ekleme -->
+          <button (click)="addToCart(product, product.quantity)">Sepete Ekle</button>
       </div>
+
     </div>
   </div>
 </div>
@@ -34,9 +37,10 @@
     <h3>Toplam Ürün: {{ getTotalItems() }}</h3>
     <h3>Toplam Fiyat: \${{ getTotalPrice() }}</h3>
   </div>
+
 </div>
 
-<div *ngIf="cart.length === 0">
+<div class="sepet" *ngIf="cart.length === 0">
   <p>Sepetiniz boş.</p>
 </div>
 
@@ -47,20 +51,23 @@
 <style>
 
   .product-list {
+  margin-top:15rem;
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 6rem;
   justify-content: center;
+
 }
 
 .product-card {
-  width: 200px;
+  width: 13rem;
   border: 1px solid #ccc;
-  border-radius: 10px;
+  border-radius: 1.2rem;
   padding: 1rem;
-  text-align: center;
+  text-align: left;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s;
+
 }
 
 .product-card:hover {
@@ -69,9 +76,9 @@
 
 .product-image {
   width: 100%;
-  height: 150px;
+  height: 9rem;;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 1.2rem;
 }
 
 .product-info {
@@ -84,19 +91,20 @@ button {
   color: white;
   padding: 0.5rem 1rem;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 0.6rem;
   margin-top: 1rem;
 }
 
 input[type="number"] {
-  width: 50px;
+  width: 4.2rem;
   text-align: center;
-  margin-left: 0.5rem;
+  margin-left: 1rem;
 }
 
 .cart-container {
-  margin-top: 2rem;
+  margin-top:5rem;
   text-align: left;
+
 }
 
 .cart-item {
@@ -108,12 +116,17 @@ input[type="number"] {
 }
 
 .cart-summary {
-  margin-top: 1.5rem;
+  margin-top: 5rem;
   text-align: right;
+  margin-bottom:10rem;
 }
 
 
+.sepet {
+  margin-top: 5rem;
+  margin-bottom:10rem;
 
+}
 
 
 

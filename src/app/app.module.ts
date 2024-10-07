@@ -32,6 +32,7 @@ import { PictureSwitcherComponent } from './batrack/components/picture-switcher/
 import { PaymentComponent } from './batrack/components/payment/payment.component';
 import {InboxService} from "./batrack/services/inbox.service";
 import {MatDialogActions, MatDialogModule} from "@angular/material/dialog";
+import { SepetComponent } from './batrack/components/sepet.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import {MatDialogActions, MatDialogModule} from "@angular/material/dialog";
     LoopButtonComponent,
     PagelemComponent,
     PictureSwitcherComponent,
-    PaymentComponent
+    PaymentComponent,
+    SepetComponent
 
   ],
     imports: [

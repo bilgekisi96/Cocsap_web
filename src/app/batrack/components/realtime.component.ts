@@ -27,6 +27,11 @@ export class RealtimeComponent implements OnInit {
     { name: 'Ürün 1', price: 50, quantity: 1, image: 'assets/folder1/@cocsapientis.jpg' },
     { name: 'Ürün 2', price: 30, quantity: 1, image: 'assets/folder1/@cocsapientis.png' },
     { name: 'Ürün 3', price: 20, quantity: 1, image: 'assets/folder1/@cocsapientis1.png' },
+    { name: 'Ürün 4', price: 50, quantity: 1, image: 'assets/folder1/@cocsapientis1.png' },
+    { name: 'Ürün 5', price: 70, quantity: 1, image: 'assets/folder1/@cocsapientis1.png' },
+    { name: 'Ürün 6', price: 60, quantity: 1, image: 'assets/folder1/@cocsapientis.png' },
+    { name: 'Ürün 7', price: 20, quantity: 1, image: 'assets/folder1/@cocsapientis1.png' },
+    { name: 'Ürün 8', price: 60, quantity: 1, image: 'assets/folder1/@cocsapientis.png' },
   ];
 
   cart: Product[] = [];
