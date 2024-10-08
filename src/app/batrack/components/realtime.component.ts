@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit,EventEmitter,Output} from '@angular/core';
 import axios from "axios";
 
 
@@ -18,12 +18,13 @@ interface Product {
 
 export class RealtimeComponent implements OnInit {
 
-  ngOnInit() {
+  cart: Product[] = [];
 
+  constructor(){}
 
-  }
+  ngOnInit() {}
 
-  @Output() cartout: EventEmitter<Product> = new EventEmitter();
+  @Output() cartout: EventEmitter<any> = new EventEmitter();
 
   products: Product[] = [
     { name: 'Ürün 1', price: 50, quantity: 1, image: 'assets/folder1/@cocsapientis.jpg' },
@@ -36,11 +37,11 @@ export class RealtimeComponent implements OnInit {
     { name: 'Ürün 8', price: 60, quantity: 1, image: 'assets/folder1/@cocsapientis.png' },
   ];
 
-  cart: Product[] = [];
 
   // Sepete ürün ekle
   addToCart(product: Product, selectedQuantity: number) {
     const existingProduct = this.cart.find(p => p.name === product.name);
+
     if (existingProduct) {
       existingProduct.quantity += selectedQuantity;
     } else {
@@ -68,14 +69,13 @@ export class RealtimeComponent implements OnInit {
 
   // Sepetteki ürün miktarını güncelle
   updateQuantity(product: Product, quantity: number) {
+    this.cartout.emit(this.cart)
     if (quantity <= 0) {
       this.removeFromCart(product); // Ürün miktarı 0 veya daha az ise sepetten çıkar.
     } else {
       product.quantity = quantity;
     }
   }
-
-  this.cartout.emit(this.cart)
 
 
 }

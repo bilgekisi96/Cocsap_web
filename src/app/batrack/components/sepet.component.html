@@ -1,3 +1,23 @@
-<app-realtime (Oncartsidenav)="Oncartsidenav($event)" [ngStyle]="{'display':'none'}"></app-realtime>
+<app-realtime (cartout)="cartout($event)" [ngStyle]="{'display':'none'}"></app-realtime>
 
-<p>sepet works!</p>
+<!-- Sepet -->
+<div class="cart-container" *ngIf="cart.length > 0">
+  <h2>Sepetiniz</h2>
+
+  <div class="cart-item" *ngFor="let product of cart">
+    <span>{{ product.name }}</span>
+    <span>\${{ product.price }}</span>
+    <input type="number" [(ngModel)]="product.quantity" min="1" (change)="updateQuantity(product, product.quantity)" />
+    <button (click)="removeFromCart(product)">Çıkar</button>
+  </div>
+
+  <div class="cart-summary">
+    <h3>Toplam Ürün: {{ getTotalItems() }}</h3>
+    <h3>Toplam Fiyat: \${{ getTotalPrice() }}</h3>
+  </div>
+
+</div>
+
+<div class="sepet" *ngIf="cart.length === 0">
+  <p>Sepetiniz boş.</p>
+</div>
