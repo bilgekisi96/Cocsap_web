@@ -1,3 +1,4 @@
+
 <app-realtime (cartout)="cartout($event)" [ngStyle]="{'display':'none'}"></app-realtime>
 
 <!-- Sepet -->
@@ -10,6 +11,9 @@
     <input type="number" [(ngModel)]="product.quantity" min="1" (change)="updateQuantity(product, product.quantity)" />
     <button (click)="removeFromCart(product)">Çıkar</button>
   </div>
+
+
+
 
   <div class="cart-summary">
     <h3>Toplam Ürün: {{ getTotalItems() }}</h3>

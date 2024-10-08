@@ -40,40 +40,14 @@ export class RealtimeComponent implements OnInit {
 
   // Sepete ürün ekle
   addToCart(product: Product, selectedQuantity: number) {
+
+    this.cartout.emit(this.cart)
     const existingProduct = this.cart.find(p => p.name === product.name);
 
     if (existingProduct) {
       existingProduct.quantity += selectedQuantity;
     } else {
       this.cart.push({ ...product, quantity: selectedQuantity });
-    }
-  }
-
-  // Sepetten ürün çıkar
-  removeFromCart(product: Product) {
-    const index = this.cart.indexOf(product);
-    if (index > -1) {
-      this.cart.splice(index, 1);
-    }
-  }
-
-  // Toplam fiyatı hesapla
-  getTotalPrice(): number {
-    return this.cart.reduce((total, product) => total + product.price * product.quantity, 0);
-  }
-
-  // Sepetteki toplam ürün adedini hesapla
-  getTotalItems(): number {
-    return this.cart.reduce((total, product) => total + product.quantity, 0);
-  }
-
-  // Sepetteki ürün miktarını güncelle
-  updateQuantity(product: Product, quantity: number) {
-    this.cartout.emit(this.cart)
-    if (quantity <= 0) {
-      this.removeFromCart(product); // Ürün miktarı 0 veya daha az ise sepetten çıkar.
-    } else {
-      product.quantity = quantity;
     }
   }
 
