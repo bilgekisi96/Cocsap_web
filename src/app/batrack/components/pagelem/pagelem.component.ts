@@ -18,7 +18,7 @@ export class PagelemComponent {
     }
 
   sepfunc(){
-    this.router.navigate(['/realtime'])
+    this.router.navigate(['/sepet'])
   }
 
   onButtonClickinsta(){

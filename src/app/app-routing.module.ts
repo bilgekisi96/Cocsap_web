@@ -8,6 +8,7 @@ import {HistoryComponent} from "./batrack/components/history.component";
 import {MapComponent} from "./batrack/components/map/map.component";
 import {LoginComponent} from "./batrack/components/login/login.component";
 import {RegisterComponent} from "./batrack/components/register/register.component";
+import {SepetComponent} from "./batrack/components/sepet.component";
 import {AuthGuard} from "./batrack/services/auth.guard"
 
 
@@ -19,6 +20,7 @@ const routes: Routes = [
       {path:'register',component:RegisterComponent},
 
       {path:'realtime',component:RealtimeComponent},
+      {path:'sepet',component:SepetComponent},
       {path:'history',component:HistoryComponent,canActivate: [AuthGuard]},
       {path:'monitoring',component:MonitoringComponent,canActivate: [AuthGuard]},
       {path:'map',component:MapComponent,canActivate: [AuthGuard]}
