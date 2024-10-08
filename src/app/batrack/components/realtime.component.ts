@@ -41,7 +41,7 @@ export class RealtimeComponent implements OnInit {
   // Sepete ürün ekle
   addToCart(product: Product, selectedQuantity: number) {
 
-    this.cartout.emit(this.cart)
+
     const existingProduct = this.cart.find(p => p.name === product.name);
 
     if (existingProduct) {
@@ -49,6 +49,8 @@ export class RealtimeComponent implements OnInit {
     } else {
       this.cart.push({ ...product, quantity: selectedQuantity });
     }
+    this.cartout.emit(this.cart)
+    console.log(this.cart)
   }
 
 
