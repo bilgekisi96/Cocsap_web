@@ -33,6 +33,8 @@ import { PaymentComponent } from './batrack/components/payment/payment.component
 import {InboxService} from "./batrack/services/inbox.service";
 import {MatDialogActions, MatDialogModule} from "@angular/material/dialog";
 import { SepetComponent } from './batrack/components/sepet.component';
+import {MatBadgeModule} from '@angular/material/badge';
+
 
 @NgModule({
   declarations: [
@@ -72,6 +74,7 @@ import { SepetComponent } from './batrack/components/sepet.component';
         ReactiveFormsModule,
         MatToolbarModule,
         MatDialogModule,
+        MatBadgeModule,
 
 
     ],

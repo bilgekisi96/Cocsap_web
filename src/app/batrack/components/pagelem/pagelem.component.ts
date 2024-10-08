@@ -8,11 +8,19 @@ import {  Router } from '@angular/router';
   ]
 })
 export class PagelemComponent {
+
+  hidden = false;
+
   constructor(private router: Router) {
   }
   logfunc(){
     this.router.navigate(['/login'])
     }
+
+  sepfunc(){
+    this.router.navigate(['/realtime'])
+  }
+
   onButtonClickinsta(){
     window.open('https://www.instagram.com/softwaresolitions', '_blank');
   }
