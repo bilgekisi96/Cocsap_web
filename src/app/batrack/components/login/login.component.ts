@@ -13,6 +13,7 @@ import {
 } from "@angular/material/dialog";
 import {MatButtonModule} from "@angular/material/button";
 import {AuthService} from "../../services/auth.service"
+import {LoginService} from "../../services/login.service";
 
 interface LoginToggle {
   Loginstatus: number | undefined;
@@ -39,7 +40,7 @@ export class LoginComponent implements OnInit {
   status : number | undefined | string;
 
   loginForm: FormGroup | any;
-  constructor(private router:Router,private fb: FormBuilder,private authService:AuthService) {}
+  constructor(private router:Router,private fb: FormBuilder,private authService:AuthService,private loginService:LoginService) {}
 
   readonly dialog = inject(MatDialog);
 
@@ -68,35 +69,11 @@ export class LoginComponent implements OnInit {
       console.log('Username:', username);
       console.log('Password:', password);
 
-      const urlpost = 'https://tekelektrikcompany.com/api/auth/login';
+
       const requestData = {"username":username,"password":password}
+      console.log(this.loginService.loginpost(requestData))
 
-      try {
 
-        const response = await axios.post(urlpost, requestData);
-
-        console.log('Status Code:', response.status);
-        console.log('Response JSON:', response.data);
-        this.status = response.status
-        console.log(this.status)
-        this.status = "Your Access verified Successfully"
-        this.openDialog()
-        this.fetchData(response)
-
-        this.loginstatus = 1
-        this.onToggleLogin.emit({Loginstatus:this.loginstatus})
-
-        this.authService.login();
-        this.router.navigate(['/monitoring']); // Redirect to home after login
-
-      }
-
-      catch(error){
-        this.status = "Password or Username is Wrong !"
-        this.openDialog()
-      }
-
-      // Add your login logic here
 
     }
   }

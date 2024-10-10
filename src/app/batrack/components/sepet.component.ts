@@ -13,6 +13,7 @@ interface Product {
   styles: [
   ]
 })
+
 export class SepetComponent implements OnInit{
 
   name: string | undefined;
@@ -26,17 +27,12 @@ export class SepetComponent implements OnInit{
 
   ngOnInit(){}
 
-
-
   cartout(data:Product){
       this.name = data.name
       this.price = data.price
       this.quantity = data.quantity
       this.image = data.image
     }
-
-
-
 
   // Sepetten ürün çıkar
   removeFromCart(product: Product) {
