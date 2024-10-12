@@ -11,18 +11,20 @@ export class AuthService {
   constructor(private router: Router) {}
 
   // Simulate login and set user as authenticated
-  login() {
-    this.loggedIn = true;
+  login(jwt_token?:any) {
+    localStorage.setItem('authToken', jwt_token);
+    this.router.navigate(['/monitoring']);
+    return true;
   }
 
   // Simulate logout and set user as not authenticated
   logout() {
-    this.loggedIn = false;
+    localStorage.removeItem('authToken');
     this.router.navigate(['/login']); // Redirect to login page after logout
   }
 
   // Check if user is logged in
   isAuthenticated(): boolean {
-    return this.loggedIn;
+    return !!localStorage.getItem('authToken');
   }
 }

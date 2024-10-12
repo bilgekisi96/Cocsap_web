@@ -14,6 +14,8 @@ import {
 import {MatButtonModule} from "@angular/material/button";
 import {AuthService} from "../../services/auth.service"
 import {LoginService} from "../../services/login.service";
+import {Ilogin} from "../../models/login";
+
 
 interface LoginToggle {
   Loginstatus: number | undefined;
@@ -29,6 +31,8 @@ export class LoginComponent implements OnInit {
 
   loginCollapsed =true;
 
+  responcedata!:Ilogin;
+
   screenWidth = 0;
   username: string | undefined;
   password: string | undefined;
@@ -40,7 +44,9 @@ export class LoginComponent implements OnInit {
   status : number | undefined | string;
 
   loginForm: FormGroup | any;
-  constructor(private router:Router,private fb: FormBuilder,private authService:AuthService,private loginService:LoginService) {}
+
+  constructor(private router:Router,private fb: FormBuilder,
+    private authService:AuthService,private loginService:LoginService) {}
 
   readonly dialog = inject(MatDialog);
 
@@ -51,16 +57,13 @@ export class LoginComponent implements OnInit {
     });
   }
 
+
   openDialog() {
     this.dialog.open(DialogElementsExampleDialog, {
       data: { status: this.status }});
   }
 
-
-
-
-
-  async onLogin() {
+  onLogin() {
 
     if (this.loginForm.valid) {
 
@@ -69,35 +72,35 @@ export class LoginComponent implements OnInit {
       console.log('Username:', username);
       console.log('Password:', password);
 
+      const requestData = {"username":username,"password":password};
 
-      const requestData = {"username":username,"password":password}
-      console.log(this.loginService.loginpost(requestData))
+      this.loginService.loginpost(requestData).subscribe(
+          (response: Ilogin) => {
+            this.responcedata = {data:response.data,status:response.status};
+            console.log('POST Response:', response);
+          },
+          (error) => {
+            console.error('POST Error:', error);
+          }
+      )
 
+      this.fetchData(this.responcedata);
 
 
     }
   }
 
-  async fetchData(accesskey:{data:string,status:number}) {
-
+  fetchData(accesskey:{data:string,status:number}) {
     const basicAuth = 'Bearer ' + Object.values(accesskey.data)[0];
 
-    try {
+    this.loginService.loginget(basicAuth).subscribe((response: Ilogin) => {
+        console.log('GET Response:', response);
+      },
+      (error) => {
+        console.error('GET Error:', error);
+      })
 
-      const response = await axios.get('https://tekelektrikcompany.com/api/auth/login', {
-        method: 'GET',
-        headers: {
-          'Authorization': basicAuth
-        }
-      });
-      // Since we can't access the response body or headers, we won't be able to handle the data here
-      console.log(response)
-
-    } catch (error) {
-      console.error('Error fetching data:', error);
-      // Handle errors here
-    }
-
+    this.authService.login(basicAuth);
   }
 
   onRegister() {

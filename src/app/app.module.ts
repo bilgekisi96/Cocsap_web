@@ -34,7 +34,7 @@ import {InboxService} from "./batrack/services/inbox.service";
 import {MatDialogActions, MatDialogModule} from "@angular/material/dialog";
 import { SepetComponent } from './batrack/components/sepet.component';
 import {MatBadgeModule} from '@angular/material/badge';
-
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -62,6 +62,7 @@ import {MatBadgeModule} from '@angular/material/badge';
         BrowserModule,
         AppRoutingModule,
         BrowserAnimationsModule,
+        HttpClientModule,
         MatInputModule,
         FormsModule,
         MatIconModule,

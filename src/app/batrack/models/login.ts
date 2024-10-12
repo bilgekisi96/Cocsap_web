@@ -1,6 +1,4 @@
-interface Ilogin {
-
-
-
-
+export interface Ilogin {
+  data:string;
+  status:number;
 }
